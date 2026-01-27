@@ -1,0 +1,468 @@
+var http = require('http');
+
+http.createServer(function (req, res) {
+  var html = buildHtml(req);
+
+  res.writeHead(200, {
+    'Content-Type': 'text/html',
+    'Content-Length': html.length,
+    'Expires': new Date().toUTCString()
+  });
+  res.end(html);
+}).listen(8090);
+
+//<script>(function () { var widget = document.createElement('script'); widget.defer = true; widget.dataset.pfId = '1dbae549-19bb-40de-bd93-ccd658c0df39'; widget.src = 'http://localhost:8000/script/widget.js?id=1dbae549-19bb-40de-bd93-ccd658c0df39&now='+Date.now(); document.head.appendChild(widget); })()</script>
+//  <script>(function () { var widget = document.createElement('script'); widget.defer = true; widget.dataset.pfId = '903cf322-a146-41ce-ab8a-2f87a52a2e6c'; widget.src = 'https://dev-widget.yourgood.app/script/widget.js?id=903cf322-a146-41ce-ab8a-2f87a52a2e6c&now='+Date.now(); document.head.appendChild(widget); })()</script>
+function buildHtml(req) {
+
+
+  // < !--YourGood Widget -->
+  // var header = `<script>(function () { var widget = document.createElement('script'); widget.defer = true; widget.dataset.pfId = '59ffbf45-8181-4325-a584-5109c791f8f5'; widget.src = 'https://widget.yourgood.app/script/widget.js?id=59ffbf45-8181-4325-a584-5109c791f8f5&now='+Date.now(); document.head.appendChild(widget); })()</script>`
+  // <!-- /YourGood Widget -->
+
+  // local widget 
+  // var header = `<script>(function () { var widget = document.createElement('script'); widget.defer = true; widget.dataset.pfId = '727ac729-3353-471c-a360-d90e7c0ccd6d'; widget.src = 'http://localhost:8000/script/widget.js?id=727ac729-3353-471c-a360-d90e7c0ccd6d&now='+Date.now(); document.head.appendChild(widget); })()</script>`
+  // var header = `<script>(function () { var widget = document.createElement('script'); widget.defer = true; widget.dataset.pfId = 'd8a584be-b5bf-4cde-a46d-390116500eb6'; widget.src = 'http://localhost:8000/script/widget.js?id=d8a584be-b5bf-4cde-a46d-390116500eb6&now='+Date.now(); document.head.appendChild(widget); })()</script>`
+  // var header = `<script>(function () { var widget = document.createElement('script'); widget.defer = true; widget.dataset.pfId = 'd8a584be-b5bf-4cde-a46d-390116500eb6'; widget.src = 'http://localhost:8000/script/widget.js?id=d8a584be-b5bf-4cde-a46d-390116500eb6&now='+Date.now(); document.head.appendChild(widget); })()</script>`
+
+  // var header = `<script>(function () { var widget = document.createElement('script'); widget.defer = true; widget.dataset.pfId = 'd8a584be-b5bf-4cde-a46d-390116500eb6'; widget.src = 'http://localhost:8000/script/widget.js?id=d8a584be-b5bf-4cde-a46d-390116500eb6&now='+Date.now(); document.head.appendChild(widget); })()</script>`
+  // var header = `<script>(function () { var widget = document.createElement('script'); widget.defer = true; widget.dataset.pfId = '06e65beb-ab66-4537-bee6-36edbd4535f6'; widget.src = 'http://localhost:8000/script/widget.js?id=06e65beb-ab66-4537-bee6-36edbd4535f6&now='+Date.now(); document.head.appendChild(widget); })()</script>`
+  
+  var header = `<script>(function () { var widget = document.createElement('script'); widget.defer = true; widget.dataset.pfId = '0fb41247-6c95-4a53-a38d-5fc31783d6f9'; widget.src = 'http://localhost:8000/script/widget.js?id=0fb41247-6c95-4a53-a38d-5fc31783d6f9&now='+Date.now(); document.head.appendChild(widget); })()</script>`
+
+  // dev
+  // var header = `<script>(function () { var widget = document.createElement('script'); widget.defer = true; widget.dataset.pfId = 'fea11de0-5801-4e75-8196-ec4368912559'; widget.src = 'https://dev-widget.yourgood.app/script/widget.js?id=fea11de0-5801-4e75-8196-ec4368912559&now='+Date.now(); document.head.appendChild(widget); })()</script>`
+  // var header = `<script>(function () { var widget = document.createElement('script'); widget.defer = true; widget.dataset.pfId = 'fea11de0-5801-4e75-8196-ec4368912559'; widget.src = 'https://dev-widget.yourgood.app/script/widget.js?id=fea11de0-5801-4e75-8196-ec4368912559&now='+Date.now(); document.head.appendChild(widget); })()</script>`
+  // var header = `<script>(function () { var widget = document.createElement('script'); widget.defer = true; widget.dataset.pfId = 'b3990e42-8fe2-4bdf-bce3-8a5f42cbde40'; widget.src = 'https://dev-widget.yourgood.app/script/widget.js?id=b3990e42-8fe2-4bdf-bce3-8a5f42cbde40&now='+Date.now(); document.head.appendChild(widget); })()</script>`
+  // var header = `<script>(function () { var widget = document.createElement('script'); widget.defer = true; widget.dataset.pfId = '09a2d9bc-65fa-4dcf-baf7-4e6e774e3438'; widget.src = 'https://dev-widget.yourgood.app/script/widget.js?id=09a2d9bc-65fa-4dcf-baf7-4e6e774e3438&now='+Date.now(); document.head.appendChild(widget); })()</script>`
+  // var header = `<script>(function () { var widget = document.createElement('script'); widget.defer = true; widget.dataset.pfId = 'd214022b-ad42-4ac8-90f4-632620a05e0d'; widget.src = 'https://dev-widget.yourgood.app/script/widget.js?id=d214022b-ad42-4ac8-90f4-632620a05e0d&now='+Date.now(); document.head.appendChild(widget); })()</script>`
+
+  // var body = `<h1 style="height: 40px">Test Server @@@@@@@@@</h1> <script>
+
+  //   </script>
+
+  //
+
+  // <a href = "http://localhost:3000/#open" style = "font-size: 30px" > BUTTON OPEN</a><br />
+  // <a href="http://localhost:3000/#whatsapp" style="font-size: 30px">BUTTON WHATSAPP</a><br />
+  //   <a href="http://localhost:3000/#telegram" style="font-size: 30px">BUTTON TELEGRAM</a><br />
+  //     <a href="http://localhost:3000/#viber" style="font-size: 30px">BUTTON VIBER</a><br />
+
+
+  // < a href = "https://widget.yourgood.app/#open" style = "font-size: 30px" > BUTTON OPEN</a><br />
+  // <a href="https://widget.yourgood.app/#whatsapp" style="font-size: 30px">BUTTON WHATSAPP</a><br />
+  //   <a href="https://widget.yourgood.app/#telegram" style="font-size: 30px">BUTTON TELEGRAM</a><br />
+  //     <a href="https://widget.yourgood.app/#viber" style="font-size: 30px">BUTTON VIBER</a><br />
+  // `;
+
+  // <a href = "https://widget.yourgood.app/#open" style = "font-size: 30px" > BUTTON OPEN</a><br/>
+  //  <a href="https://widget.yourgood.app/#whatsapp" style="font-size: 30px">BUTTON WHATSAPP</a><br/>
+  //    <a href="https://widget.yourgood.app/#telegram" style="font-size: 30px">BUTTON TELEGRAM</a><br/>
+  //     <a href="https://widget.yourgood.app/#viber" style="font-size: 30px">BUTTON VIBER</a><br/>
+  //      <a href="https://widget.yourgood.app/#max" style="font-size: 30px">BUTTON MAX</a><br/>
+
+
+
+
+  var body = `
+    <div class="container">
+      <header class="header">
+        <h1 class="title">🚀 Test Server для виджета</h1>
+        <p class="subtitle">Страница для тестирования функциональности виджета YourGood</p>
+      </header>
+
+      <main class="main-content">
+        <section class="widget-test-section">
+          <h2 class="section-title">Тестовые кнопки виджета</h2>
+          <div class="button-grid">
+            <a href="http://localhost:3000/#open&path=http://localhost:8090/" class="test-button primary">
+              <span class="button-icon">📱</span>
+              <span class="button-text">OPEN + link</span>
+            </a>
+              <a href="http://localhost:3000/#open" class="test-button primary">
+              <span class="button-icon">📱</span>
+              <span class="button-text">OPEN</span>
+            </a>
+            <a href="http://localhost:3000/#whatsapp&path=http://localhost:8090/" class="test-button whatsapp">
+              <span class="button-icon">💬</span>
+              <span class="button-text">WHATSAPP</span>
+            </a>
+            <a href="http://localhost:3000/#telegram&path=http://localhost:8090/" class="test-button telegram">
+              <span class="button-icon">✈️</span>
+              <span class="button-text">TELEGRAM</span>
+            </a>
+            <a href="https://widget.yourgood.app/#viber&path=http://localhost:8090/" class="test-button viber">
+              <span class="button-icon">📞</span>
+              <span class="button-text">VIBER</span>
+            </a>
+            <a href="http://localhost:3000/#max" class="test-button max">
+              <span class="button-icon">⚡</span>
+              <span class="button-text">MAX</span>
+            </a>
+          </div>
+        </section>
+
+        <section class="content-section">
+          <h2 class="section-title">Контент для тестирования</h2>
+          <div class="content-text">
+            <p>Это тестовая страница для проверки работы виджета YourGood. Здесь представлен различный контент для тестирования функциональности виджета в различных условиях.</p>
+            
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas laoreet, enim nec viverra finibus, metus magna varius elit, quis ornare justo diam vel diam. Ut nec congue felis. Suspendisse tempor, ipsum a aliquam cursus, lectus nibh venenatis elit, in tempus tellus dui sed tortor. Vivamus non consequat urna, eget ornare felis. Duis finibus est non urna bibendum, feugiat varius mi porta.</p>
+
+            <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Praesent ornare ante ac odio elementum pulvinar. Sed fermentum porttitor finibus. Vivamus sodales consequat sem, eget vehicula massa ultricies sed. Nullam non scelerisque erat. Aliquam vitae scelerisque libero.</p>
+
+            <p>Duis posuere neque sed lacus convallis viverra ac quis ex. Nam consequat vel risus at porttitor. Aenean consectetur lorem sed vulputate posuere. Curabitur vel nibh non diam elementum tempor. Nunc pellentesque enim nec felis bibendum, sit amet faucibus quam rutrum.</p>
+
+            <p>In arcu dolor, interdum at tortor quis, efficitur dictum tellus. Vivamus enim arcu, sollicitudin vitae arcu a, rhoncus varius odio. Ut velit magna, elementum vel est eget, iaculis ullamcorper justo. Cras ut tincidunt turpis, sed euismod nunc. Phasellus congue lacus odio, at semper ligula viverra non.</p>
+
+            <p>Praesent vulputate turpis molestie risus suscipit, egestas ornare sem molestie. Etiam in elit lacus. Quisque vitae commodo ante. Pellentesque orci sapien, dignissim ut dolor in, maximus dignissim mauris. Sed at felis id diam viverra volutpat nec ut lacus.</p>
+
+            <p>Maecenas nec interdum orci. Nullam tincidunt risus metus, in volutpat nisl ornare ac. Suspendisse sapien enim, mollis ut volutpat at, efficitur sit amet orci. In hac habitasse platea dictumst. Ut vel purus et nunc feugiat finibus quis eget leo. Sed viverra augue nec porttitor accumsan.</p>
+
+            <p>Phasellus tincidunt mi elit, eu tristique neque finibus id. Integer consequat lorem nec justo maximus, in vulputate ligula fringilla. Ut rhoncus libero id arcu vulputate, porta varius risus molestie. Etiam tellus libero, varius id lectus gravida, convallis fringilla enim. Nullam tincidunt sapien in dapibus convallis.</p>
+
+            <p>Vestibulum eget mauris enim. Nam lobortis libero a malesuada fringilla. Quisque in condimentum magna. Pellentesque iaculis, lectus sit amet condimentum tincidunt, sapien leo placerat elit, vel porta leo lectus at mi. Curabitur accumsan elit nibh, feugiat condimentum nisl cursus a.</p>
+
+            <p>Quisque posuere finibus elementum. Mauris vitae dapibus mauris, eget hendrerit urna. Donec erat sem, vehicula vel nisi sit amet, facilisis porttitor sem. Sed finibus lacus sit amet diam eleifend bibendum nec efficitur nunc. Sed euismod lorem at eros maximus, laoreet blandit libero eleifend.</p>
+
+            <p>Praesent at metus non leo rutrum dignissim ut nec dolor. Nam interdum tincidunt arcu eu porta. Pellentesque porttitor luctus nisl a tristique. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vitae risus non nulla luctus lacinia. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
+          </div>
+        </section>
+
+        <section class="info-section">
+          <h2 class="section-title">Информация о тестировании</h2>
+          <div class="info-cards">
+            <div class="info-card">
+              <h3>🎯 Цель тестирования</h3>
+              <p>Проверка корректной работы виджета в различных сценариях использования</p>
+            </div>
+            <div class="info-card">
+              <h3>🔧 Функции</h3>
+              <p>Тестирование кнопок открытия, WhatsApp, Telegram, Viber и максимального режима</p>
+            </div>
+            <div class="info-card">
+              <h3>📊 Мониторинг</h3>
+              <p>Отслеживание производительности и корректности работы виджета</p>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <p>&copy; 2024 Test Server для виджета YourGood</p>
+      </footer>
+    </div>
+  `;
+
+  return '<!DOCTYPE html>'
+    + '<html lang="ru"><head>' + header + ' <meta name="viewport" content="width=device-width, initial-scale=1">' + '<meta charset = "UTF-8"> ' + `
+    <style>
+      :root {
+        --color-text: #EDF0F5;
+        --color-bg: #0a0a0a;
+        --color-primary: #6366f1;
+        --color-secondary: #8b5cf6;
+        --color-accent: #06b6d4;
+        --color-success: #10b981;
+        --color-warning: #f59e0b;
+        --color-danger: #ef4444;
+        --color-surface: #1a1a1a;
+        --color-border: #333333;
+        --gradient-primary: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+        --gradient-surface: linear-gradient(135deg, var(--color-surface), #2a2a2a);
+        --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+        --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background: var(--color-bg);
+        color: var(--color-text);
+        line-height: 1.6;
+        min-height: 100vh;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      .header {
+        text-align: center;
+        padding: 60px 0 40px;
+        background: var(--gradient-primary);
+        margin-bottom: 40px;
+        border-radius: 0 0 20px 20px;
+        box-shadow: var(--shadow-lg);
+      }
+
+      .title {
+        font-size: 3rem;
+        font-weight: 700;
+        margin-bottom: 16px;
+        background: linear-gradient(45deg, #fff, #e0e7ff);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      .subtitle {
+        font-size: 1.2rem;
+        opacity: 0.9;
+        font-weight: 300;
+      }
+
+      .main-content {
+        padding: 0 0 60px;
+      }
+
+      .section-title {
+        font-size: 2rem;
+        font-weight: 600;
+        margin-bottom: 30px;
+        text-align: center;
+        color: var(--color-primary);
+        position: relative;
+      }
+
+      .section-title::after {
+        content: '';
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 60px;
+        height: 3px;
+        background: var(--gradient-primary);
+        border-radius: 2px;
+      }
+
+      .widget-test-section {
+        margin-bottom: 60px;
+        padding: 40px;
+        background: var(--gradient-surface);
+        border-radius: 20px;
+        box-shadow: var(--shadow-lg);
+        border: 1px solid var(--color-border);
+      }
+
+      .button-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+        margin-top: 30px;
+      }
+
+      .test-button {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 30px 20px;
+        text-decoration: none;
+        border-radius: 16px;
+        transition: all 0.3s ease;
+        border: 2px solid transparent;
+        background: var(--gradient-surface);
+        box-shadow: var(--shadow-md);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .test-button::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+        transition: left 0.5s ease;
+      }
+
+      .test-button:hover::before {
+        left: 100%;
+      }
+
+      .test-button:hover {
+        transform: translateY(-5px);
+        box-shadow: var(--shadow-xl);
+        border-color: var(--color-primary);
+      }
+
+      .test-button.primary {
+        background: linear-gradient(135deg, var(--color-primary), #4f46e5);
+      }
+
+      .test-button.whatsapp {
+        background: linear-gradient(135deg, #25d366, #128c7e);
+      }
+
+      .test-button.telegram {
+        background: linear-gradient(135deg, #0088cc, #0066aa);
+      }
+
+      .test-button.viber {
+        background: linear-gradient(135deg, #665cac, #4a4a8a);
+      }
+
+      .test-button.max {
+        background: linear-gradient(135deg, var(--color-accent), #0891b2);
+      }
+
+      .button-icon {
+        font-size: 2.5rem;
+        margin-bottom: 12px;
+        display: block;
+      }
+
+      .button-text {
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: white;
+        text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+      }
+
+      .content-section {
+        margin-bottom: 60px;
+        padding: 40px;
+        background: var(--gradient-surface);
+        border-radius: 20px;
+        box-shadow: var(--shadow-lg);
+        border: 1px solid var(--color-border);
+      }
+
+      .content-text {
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      .content-text p {
+        margin-bottom: 20px;
+        font-size: 1.1rem;
+        line-height: 1.8;
+        text-align: justify;
+      }
+
+      .content-text p:first-child {
+        font-size: 1.2rem;
+        font-weight: 500;
+        color: var(--color-primary);
+        text-align: center;
+        margin-bottom: 30px;
+        padding: 20px;
+        background: rgba(99, 102, 241, 0.1);
+        border-radius: 12px;
+        border-left: 4px solid var(--color-primary);
+      }
+
+      .info-section {
+        margin-bottom: 40px;
+      }
+
+      .info-cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+        margin-top: 30px;
+      }
+
+      .info-card {
+        padding: 30px;
+        background: var(--gradient-surface);
+        border-radius: 16px;
+        box-shadow: var(--shadow-md);
+        border: 1px solid var(--color-border);
+        transition: all 0.3s ease;
+        text-align: center;
+      }
+
+      .info-card:hover {
+        transform: translateY(-5px);
+        box-shadow: var(--shadow-lg);
+        border-color: var(--color-primary);
+      }
+
+      .info-card h3 {
+        font-size: 1.3rem;
+        font-weight: 600;
+        margin-bottom: 15px;
+        color: var(--color-primary);
+      }
+
+      .info-card p {
+        font-size: 1rem;
+        line-height: 1.6;
+        opacity: 0.9;
+      }
+
+      .footer {
+        text-align: center;
+        padding: 40px 0;
+        background: var(--gradient-surface);
+        border-radius: 20px 20px 0 0;
+        border-top: 1px solid var(--color-border);
+        margin-top: 40px;
+      }
+
+      .footer p {
+        font-size: 0.9rem;
+        opacity: 0.7;
+      }
+
+      /* Анимации */
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .header, .widget-test-section, .content-section, .info-section {
+        animation: fadeInUp 0.6s ease-out;
+      }
+
+      .widget-test-section {
+        animation-delay: 0.1s;
+      }
+
+      .content-section {
+        animation-delay: 0.2s;
+      }
+
+      .info-section {
+        animation-delay: 0.3s;
+      }
+
+      /* Скроллбар */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+
+      ::-webkit-scrollbar-track {
+        background: var(--color-surface);
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background: var(--color-primary);
+        border-radius: 4px;
+      }
+
+      ::-webkit-scrollbar-thumb:hover {
+        background: var(--color-secondary);
+      }
+    </style>
+    ` + '</head> <body>' + body + '</body></html> ';
+};
