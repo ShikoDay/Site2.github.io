@@ -92,6 +92,31 @@
         font-weight: 300;
       }
 
+      .header-nav {
+        display: flex;
+        gap: 12px;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 24px;
+      }
+
+      .nav-btn {
+        padding: 10px 24px;
+        border-radius: 10px;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 0.95rem;
+        background: rgba(255, 255, 255, 0.15);
+        color: #fff;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        transition: background 0.2s, transform 0.2s;
+      }
+
+      .nav-btn:hover {
+        background: rgba(255, 255, 255, 0.28);
+        transform: translateY(-2px);
+      }
+
       .main-content {
         padding: 0 0 60px;
       }
@@ -341,6 +366,14 @@
       <header class="header">
         <h1 class="title">🚀 Test Server для виджета</h1>
         <p class="subtitle">Страница для тестирования функциональности виджета YourGood</p>
+        <nav class="header-nav">
+          <a href="https://shikoday.github.io/Site2.github.io/testpage1" class="nav-btn">Test Page 1</a>
+          <a href="https://shikoday.github.io/Site2.github.io/testpage2" class="nav-btn">Test Page 2</a>
+          <a href="https://shikoday.github.io/Site2.github.io/testpage3" class="nav-btn">Test Page 3</a>
+          <a href="https://shikoday.github.io/Site2.github.io/testpage2/page1" class="nav-btn">Page 1</a>
+          <a href="https://shikoday.github.io/Site2.github.io/testpage2/page2" class="nav-btn">Page 2</a>
+          <a href="https://shikoday.github.io/Site2.github.io/testpage2/page1/23" class="nav-btn">Page 1 / 23</a>
+        </nav>
       </header>
 
       <main class="main-content">
